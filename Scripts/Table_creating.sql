@@ -5,10 +5,8 @@ CREATE TABLE students (
 	student_id INT PRIMARY KEY AUTO_INCREMENT,
 	student_name VARCHAR(50),
 	student_department_id INT,
+	student_GPA INT
 );
-
-ALTER TABLE students
-ADD student_GPA INT;
 
 CREATE TABLE faculty ( 
 	instructor_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -27,11 +25,10 @@ CREATE TABLE enrollments (
 	enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
 	student_id INT,
 	course_id INT,
-	enrollment_date DATE
+	enrollment_date DATE,
+	course_grade INT
 );
 
-alter table enrollments
-add course_grade INT;
 
 CREATE TABLE departments ( 
 	department_id INT PRIMARY KEY AUTO_INCREMENT,
